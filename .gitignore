@@ -1,0 +1,19 @@
+__pycache__/
+*.py[cod]
+.env
+data/*.csv
+data/**/*.csv
+*.csv
+sir-data/
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+/venv
+requirements.txt
+.vscode/
+>>>>>>> de26ead47d097a515b194157e38f2dedc6206d28
+=======
+/venv
+requirements.txt
+.vscode/
+>>>>>>> de26ead47d097a515b194157e38f2dedc6206d28
