@@ -1,6 +1,6 @@
 import numpy as np
 from tensorflow.keras.models import load_model
-from prepare_data import load_data, preprocess_single_input
+from util.prepare_data import load_data, preprocess_single_input
 import os
 from dotenv import load_dotenv
 import requests

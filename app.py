@@ -1,5 +1,5 @@
 from flask import Flask, request, render_template
-from ner import get_entities
+from util.ner import get_entities
 
 app = Flask(__name__)
 
