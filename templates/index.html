@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+<head>
+    <title>NER Web App</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f2f6f9;
+            padding: 40px;
+            color: #333;
+        }
+
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+        }
+
+        form {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            max-width: 800px;
+            margin: auto;
+        }
+
+        textarea {
+            width: 100%;
+            font-size: 16px;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            resize: vertical;
+        }
+
+        input[type="submit"] {
+            background-color: #5dade2;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #3498db;
+        }
+
+        .entity-table {
+            margin: 30px auto;
+            width: 100%;
+            max-width: 800px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            overflow: hidden;
+            border-collapse: collapse;
+        }
+
+        .entity-table th {
+            background-color: #aed6f1;
+            color: #2c3e50;
+            font-weight: bold;
+            text-align: left;
+            padding: 12px;
+        }
+
+        .entity-table td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .entity-table td:last-child {
+            text-align: right;
+            font-weight: bold;
+            color: #2e86c1;
+        }
+
+        h2 {
+            text-align: center;
+            color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+    <h1>NER Web App</h1>
+
+    <form method="POST">
+        <textarea name="text" rows="8" placeholder="Enter your text here...">{{ input_text }}</textarea><br>
+        <input type="submit" value="Extract Entities">
+    </form>
+
+    {% if entities %}
+    <h2>Extracted Entities:</h2>
+    <table class="entity-table">
+        <thead>
+            <tr>
+                <th>Entity</th>
+                <th>Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for ent in entities %}
+            <tr>
+                <td>{{ ent.word }}</td>
+                <td>{{ ent.entity_group }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% endif %}
+</body>
+</html>
