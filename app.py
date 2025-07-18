@@ -1,7 +1,11 @@
 from flask import Flask, request, render_template
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 from ner1 import get_entities  # ✅ Import from ner1.py
+=======
+from util.ner import get_entities
+>>>>>>> de26ead47d097a515b194157e38f2dedc6206d28
 =======
 from util.ner import get_entities
 >>>>>>> de26ead47d097a515b194157e38f2dedc6206d28
@@ -30,7 +34,11 @@ def index():
 if __name__ == "__main__":
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     app.run(debug=True)
+=======
+    app.run(debug=True)
+>>>>>>> de26ead47d097a515b194157e38f2dedc6206d28
 =======
     app.run(debug=True)
 >>>>>>> de26ead47d097a515b194157e38f2dedc6206d28
