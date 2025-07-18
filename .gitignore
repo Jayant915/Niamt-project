@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.env
+data/*.csv
+data/**/*.csv
+*.csv
+sir-data/
+/venv
+requirements.txt
+.vscode/
